@@ -75,6 +75,6 @@ Contributions to this middleware are welcome! Feel free to enhance its functiona
 
 ## License
 
-This project is open-source and available under the [Business Source License (BSL)](https://en.wikipedia.org/wiki/Business_Source_License). You are free to use and modify the middleware as needed for your applications, subject to the terms and conditions of the BSL.
+This project is available under the [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/).
 
 Enjoy seamless interactions between Slack and the OpenAI API with Slack-OpenAI Middleware!
