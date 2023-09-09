@@ -24,8 +24,8 @@ Follow these steps to set up and run the Slack-OpenAI Middleware:
 1. Clone the Repository:
 
    ```shell
-   git clone https://github.com/your-username/slack-openai-middleware.git
-   cd slack-openai-middleware
+   git clone https://github.com/nitesh8860/platform-gpt
+   cd platform-gpt
    ```
 
 2. Create a Configuration File:
@@ -46,7 +46,7 @@ Follow these steps to set up and run the Slack-OpenAI Middleware:
    Install the required Python packages:
 
    ```shell
-   pip install fastapi uvicorn openai slack_sdk python-dotenv
+   pip install -r requirements.txt
    ```
 
 5. Run the Middleware:
@@ -54,7 +54,7 @@ Follow these steps to set up and run the Slack-OpenAI Middleware:
    Start the middleware application using Uvicorn:
 
    ```shell
-   uvicorn slack_event_receiver:app --reload
+   uvicorn app.main:app --reload
    ```
 
 ## Custom Functions
