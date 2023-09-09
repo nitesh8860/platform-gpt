@@ -30,11 +30,7 @@ Follow these steps to set up and run the Slack-OpenAI Middleware:
 
 2. Create a Configuration File:
 
-   Copy the `.env.example` file to `.env` and update the following values:
-
-   - `GPT_API_KEY`: Your OpenAI API key.
-   - `SLACK_TOKEN`: Your Slack token.
-   - `SENTRY_DSN`: Your Sentry DSN (optional).
+   Copy the `.env.example` file to `.env` and update the values:
 
 3. Set Up a Virtual Environment:
 
@@ -63,7 +59,15 @@ Follow these steps to set up and run the Slack-OpenAI Middleware:
 
 ## Custom Functions
 
-You can extend the middleware by defining custom functions to handle specific user requests. Explore the `app` directory to add your custom logic.
+You can extend the middleware by defining custom functions to handle specific user requests. Explore the `app` directory to add your custom logic in `custom_functions.py`.
+
+## Chat Screenshots
+
+Explore the application with these screenshots:
+
+![Screenshot 1](screenshots/1.png)
+
+![Screenshot 2](screenshots/2.png)
 
 ## Error Tracking (Sentry)
 
