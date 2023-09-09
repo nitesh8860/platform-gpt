@@ -133,7 +133,7 @@ conversation_buffer.append(
 def handle_chat(event):
     """handle chat event from slack, interact with openai and send final response to slack"""
     global conversation_buffer
-    if event.event.type:
+    if event.event.type and event.event.type != 'test':
         if "goodbye" in event.event.text:
             print("***********clearing conversation buffer")
             conversation_buffer = []
@@ -166,10 +166,10 @@ async def receive_slack_event(event: schemas.SlackPayload, db: Session = Depends
         raise HTTPException(status_code=403, detail="Invalid token")
     if event.type == "url_verification":
         return {"challenge": event.challenge}
-    new_event = models.SlackEvent(**event.event.dict())
-    db.add(new_event)
-    db.commit()
-    db.refresh(new_event)
+    # new_event = models.SlackEvent(**event.event.dict())
+    # db.add(new_event)
+    # db.commit()
+    # db.refresh(new_event)
     if event.event.user != settings.slack_bot_user:
         threading.Thread(target=handle_chat, args=(event,)).start()
-    return {"message": "Event received"}
+        return {"message": "Event received"}
