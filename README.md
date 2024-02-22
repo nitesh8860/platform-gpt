@@ -74,6 +74,10 @@ Follow these steps to set up and run the Platform-GPT Middleware:
 
 You can extend the middleware by defining custom functions to handle specific user requests. Explore the `app` directory to add your custom logic in `custom_functions.py`.
 
+## Architecture
+
+![Screenshot 1](screenshots/3.png)
+
 ## Chat Screenshots
 
 Explore the application with these screenshots:
@@ -95,3 +99,7 @@ Contributions to this middleware are welcome! Feel free to enhance its functiona
 This project is available under the [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/).
 
 Enjoy seamless interactions between Slack and the OpenAI API with Platform-GPT Middleware!
+
+## NOTE
+
+Database is not in use and yet to be implemented.

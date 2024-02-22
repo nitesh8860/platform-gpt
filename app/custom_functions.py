@@ -17,7 +17,7 @@ def get_secrets(vault_url, vault_token, secret_path):
 def get_k8s_pods():
     # Run the kubectl command to get pods in a custom format
     cmd = [
-        'kubectl', 'get', 'pods',
+        'kubectl', 'get', 'pods', '-A',
         '-o=custom-columns=NAME:.metadata.name,STATUS:.status.phase,NODE:.spec.nodeName,IP:.status.podIP'
     ]
 
@@ -44,7 +44,7 @@ def get_k8s_pods():
 def get_k8s_events():
     # Run the kubectl command to get events in a custom format
     cmd = [
-        'kubectl', 'get', 'events',
+        'kubectl', 'get', 'events', '-A',
         '-o=custom-columns=LAST SEEN:.lastTimestamp,TYPE:.type,REASON:.reason,OBJECT:.involvedObject.kind/.involvedObject.name,MESSAGE:.message'
     ]
 
